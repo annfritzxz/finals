@@ -1,0 +1,60 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(to right, #e0c7a2, #ffffff);
+}
+
+.auth-container {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 300px;
+}
+
+.auth-container input, .auth-container button {
+  width: 100%;
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  border: 1px solid #a38255;
+  border-radius: 10px;
+}
+
+.brown-btn {
+  background-color: #a38255;
+  color: white;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.brown-btn:hover {
+  background-color: #8f6a3e;
+}
+
+.home-page {
+  background: url("hotel.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #4d392b;
+  text-align: center;
+  height: 100vh;
+  padding-top: 50px;
+}
+
+.home-container {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 2rem;
+  margin: auto;
+  width: 50%;
+  border-radius: 15px;
+}
