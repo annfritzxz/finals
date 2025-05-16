@@ -4,25 +4,87 @@
   <meta charset="UTF-8" />
   <title>Reservation - GreenStay</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('hotel.jpg') no-repeat center center fixed;
+      background-size: cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .background-blur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      backdrop-filter: blur(8px);
+      background-color: rgba(255, 255, 255, 0.2);
+      z-index: 0;
+    }
+
+    .reservation-container {
+      position: relative;
+      z-index: 1;
+      background-color: rgba(255, 255, 255, 0.95);
+      width: 350px;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      text-align: center;
+    }
+
+    .reservation-container h2 {
+      margin-bottom: 20px;
+      color: #5D4037;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="date"],
+    input[type="number"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    button {
+      background-color: #8D6E63;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #6D4C41;
+    }
+  </style>
 </head>
-<body class="auth-page">
-  <div class="auth-container">
+<body>
+
+  <div class="background-blur"></div>
+
+  <div class="reservation-container">
     <h2>Book Your Stay</h2>
-    <form id="reservation-form" onsubmit="handleReservation(event)">
-      <input type="text" placeholder="Full Name" required />
-      <input type="email" placeholder="Email" required />
-      
-      <!-- Date fields as text with placeholder and date picker on focus -->
-      <input type="text" placeholder="Start of Reservation" onfocus="(this.type='date')" required />
-      <input type="text" placeholder="End of Reservation" onfocus="(this.type='date')" required />
-      
-      <input type="number" placeholder="Number of Guests" required />
-      <button type="submit" class="brown-btn">Reserve</button>
+    <form action="reserve.php" method="POST">
+      <input type="text" name="name" placeholder="Full Name" required />
+      <input type="email" name="email" placeholder="Email" required />
+      <input type="date" name="check_in" required />
+      <input type="date" name="check_out" required />
+      <input type="number" name="guests" placeholder="Number of Guests" required />
+      <button type="submit">Book Now</button>
     </form>
-    <p id="thank-you-message" style="display: none; color: green; margin-top: 10px;">
-      Thank you for your reservation!
-    </p>
   </div>
-  <script src="script.js"></script>
+
 </body>
 </html>

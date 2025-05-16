@@ -1,60 +1,157 @@
+/* General Styles */
 body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
+  padding: 0;
+  background-color: #fffaf0;
+  color: #5c4033;
 }
 
+/* Home Page Styling */
+.home-page {
+  background-image: url('hotel.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 20px;
+}
+
+.home-container h2 {
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.home-container p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.home-container button {
+  padding: 12px 24px;
+  background-color: #a0522d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.home-container button:hover {
+  background-color: #8b4513;
+}
+
+/* Login and Registration Page Styling */
 .auth-page {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background: linear-gradient(to right, #e0c7a2, #ffffff);
+  background-color: #fffaf0;
 }
 
 .auth-container {
-  background-color: #fff;
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  text-align: center;
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   width: 300px;
 }
 
-.auth-container input, .auth-container button {
-  width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  border: 1px solid #a38255;
-  border-radius: 10px;
+.auth-container h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #5c4033;
 }
 
-.brown-btn {
-  background-color: #a38255;
+.auth-container input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #d2b48c;
+  border-radius: 6px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  background-color: #a0522d;
   color: white;
   border: none;
-  padding: 0.5rem;
-  border-radius: 10px;
+  border-radius: 6px;
   cursor: pointer;
-  font-weight: bold;
+  transition: background-color 0.3s;
 }
 
-.brown-btn:hover {
-  background-color: #8f6a3e;
+.auth-container button:hover {
+  background-color: #8b4513;
 }
 
-.home-page {
-  background: url("hotel.jpg") no-repeat center center fixed;
-  background-size: cover;
-  color: #4d392b;
+.auth-container p {
   text-align: center;
-  height: 100vh;
-  padding-top: 50px;
+  font-size: 14px;
 }
 
-.home-container {
-  background-color: rgba(255, 255, 255, 0.85);
-  padding: 2rem;
-  margin: auto;
-  width: 50%;
-  border-radius: 15px;
+.auth-container a {
+  color: #a0522d;
+  text-decoration: none;
+}
+
+.auth-container a:hover {
+  text-decoration: underline;
+}
+
+/* Reservation Page Styling */
+.reservation-page {
+  background-image: url('hotel copy.jpg');
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.reservation-container {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 800px;
+}
+
+.reservation-container h2 {
+  color: #5c4033;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.reservation-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.reservation-table th,
+.reservation-table td {
+  padding: 12px;
+  border: 1px solid #d2b48c;
+  text-align: center;
+  font-size: 16px;
+  color: #5c4033;
+}
+
+.reservation-table th {
+  background-color: #f5deb3;
+}
+
+.reservation-table tr:nth-child(even) {
+  background-color: #fffaf0;
 }
